@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Bebas Neue";
+}
+
+nav{
+    width:100vw;
+    background: rgb(243, 243, 243);
+}
+
+.dropdownBtn{
+    display: inline-block;
+    width:fit-content;
+    padding:50px;
+    font-size: 1.5rem;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dropdownBtn:hover{
+    color:#F0C808;
+    background: #000;
+    /* transform: scale(0.95); */
+}
+
+#dropdownWrapper{
+    transition: all 0.5s ease-in-out;
+    width:100vw;
+    /* height: 10vh;
+    overflow: hidden; */
+    /* background: #000; */
+    position: relative;
+}
+#dropdownWrapper.visible{
+    height: 20vh;
+}
+
+#dropdownWrapper::-webkit-scrollbar{
+    height: 0px;
+    color:transparent
+}
+
+.dropdownMenu{
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    width:100%;
+    height: 20vh;
+    position: absolute;
+    display: grid;;
+    grid-auto-flow: column;
+    /* padding:20px 0; */
+    align-items: center;
+    transform: translateY(-100%);
+    z-index: -1;
+}
+.dropdownMenu.visible{
+    visibility:visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdownMenu.open{
+    visibility: visible;
+    opacity: 1;
+    height: 20vh;
+}
+
+.dropdownMenu li{
+    list-style-type: none;
+    /* text-decoration:underline wavy; */
+    text-align: center;
+    font-size: 1.5rem;
+    height: 100%;
+    background:#F0C808;
+    display: grid;
+    align-items: center;
+    transition: transform 0.12s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.dropdownMenu li:hover{
+    background: rgb(0, 0, 0);
+    color:white;
+    cursor: pointer;
+    transform: scale(0.95);
+}
