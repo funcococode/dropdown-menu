@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dropdown Menu</title>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,19 +21,19 @@
         <div id="services" class="dropdownMenu">
             <li class="ddItem">
                 Reparing and Renovation
-                <marquee class="ddItemMark" scrollamount="30">Reparing and Renovation</marquee>
+                <!-- <marquee class="ddItemMark" scrollamount="20" hspace="0px">Reparing and Renovation Reparing and Renovation Reparing and Renovation Reparing and Renovation</marquee> -->
             </li>
             <li class="ddItem">
                 Customer Care
-                <marquee class="ddItemMark" scrollamount="30">Customer Care</marquee>
+                <!-- <marquee class="ddItemMark" scrollamount="20">Customer Care Customer Care Customer Care Customer Care Customer Care Customer Care </marquee> -->
             </li>
             <li class="ddItem">
                 Book a visit
-                <marquee class="ddItemMark" scrollamount="30">Book a visit</marquee>
+                <!-- <marquee class="ddItemMark" scrollamount="20">Book a visit Book a visit Book a visit Book a visit Book a visit Book a visit Book a visit </marquee> -->
             </li>
             <li class="ddItem">
                 Our Team
-                <marquee class="ddItemMark" scrollamount="30">Our Team</marquee>
+                <!-- <marquee class="ddItemMark" scrollamount="20">Our Team Our Team Our Team Our Team Our Team Our Team Our Team Our Team Our Team Our Team Our Team </marquee> -->
             </li>
         </div>
         <div id="products" class="dropdownMenu">
@@ -49,6 +49,13 @@
 
     <section>
         <h2 id="leadLine">A cool dropdown menu with a <u>marquee background</u> effect.</h2>
+        <div id="searchArea">
+            <div class="fieldWrapper">
+                <input type="text" id="searchBox" name="searchBox"  required>
+                <label id="searchLabel" for="searchBox">Search Here</label>
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
     </section>
     
     <script src="main.js"></script>
