@@ -6,17 +6,32 @@
     font-family: "Bebas Neue";
 }
 
+body{
+    overflow: hidden;
+}
+
 nav{
     width:100vw;
     background: rgb(243, 243, 243);
+    z-index: 2;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    padding:0 50px;
 }
-
+#logo{
+    font-family: "Laviossa";
+}
+.linkWrapper{
+    justify-self: end;
+}
 .dropdownBtn{
+    font-family: "Laviossa";
     display: inline-block;
     width:fit-content;
     padding:50px;
     font-size: 1.5rem;
-    letter-spacing: 1.2px;
     text-decoration: none;
     cursor: pointer;
 }
@@ -33,7 +48,7 @@ nav{
     /* height: 10vh;
     overflow: hidden; */
     /* background: #000; */
-    position: relative;
+    position: static;
 }
 #dropdownWrapper.visible{
     height: 20vh;
@@ -57,18 +72,12 @@ nav{
     /* padding:20px 0; */
     align-items: center;
     transform: translateY(-100%);
-    z-index: -1;
+    z-index: 1;
 }
 .dropdownMenu.visible{
     visibility:visible;
     opacity: 1;
     transform: translateY(0);
-}
-
-.dropdownMenu.open{
-    visibility: visible;
-    opacity: 1;
-    height: 20vh;
 }
 
 .dropdownMenu li{
@@ -81,10 +90,47 @@ nav{
     display: grid;
     align-items: center;
     transition: transform 0.12s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
 }
 .dropdownMenu li:hover{
     background: rgb(0, 0, 0);
     color:white;
     cursor: pointer;
     transform: scale(0.95);
+}
+
+.ddItemMark{
+    position: absolute;
+    font-size: 10rem;
+    color:#f0c90856;
+    opacity:0;
+}
+
+.dropdownMenu li:hover .ddItemMark{
+    opacity: 1;
+}
+
+
+section {
+    height:80vh;
+    display: grid;
+    align-items: center;
+    pointer-events: none;
+    background: rgb(255, 255, 255);
+    position: relative;
+    z-index: 0;
+}
+section h2{
+    font-size: 4.5rem;
+    /* letter-spacing: 1.2px; */
+    font-family: "Laviossa";
+    text-transform: capitalize;
+    font-weight: 100;
+    text-align: center;
+}
+
+section h2 u{
+    font-family: "Laviossa";
+    text-decoration: underline wavy;
+    color:#F0C808
 }

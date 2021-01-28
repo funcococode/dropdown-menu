@@ -9,16 +9,32 @@
 </head>
 <body>
     <nav id="navigation">
-        <a class="dropdownBtn" data-menu="services">Services</a>
-        <a class="dropdownBtn" data-menu="products">Products</a>
+        <h2 id="logo">Dropdown Menu.</h2>
+        <div class="linkWrapper">
+            <a class="dropdownBtn" data-menu="services">Services</a>
+            <a class="dropdownBtn" data-menu="products">Products</a>
+        </div>
     </nav>
 
     <div id="dropdownWrapper" class="dropdownWrapper">
+
         <div id="services" class="dropdownMenu">
-            <li class="ddItem">Reparing and Renovation</li>
-            <li class="ddItem">Customer Care</li>
-            <li class="ddItem">Book a visit</li>
-            <li class="ddItem">Our Team</li>
+            <li class="ddItem">
+                Reparing and Renovation
+                <marquee class="ddItemMark" scrollamount="30">Reparing and Renovation</marquee>
+            </li>
+            <li class="ddItem">
+                Customer Care
+                <marquee class="ddItemMark" scrollamount="30">Customer Care</marquee>
+            </li>
+            <li class="ddItem">
+                Book a visit
+                <marquee class="ddItemMark" scrollamount="30">Book a visit</marquee>
+            </li>
+            <li class="ddItem">
+                Our Team
+                <marquee class="ddItemMark" scrollamount="30">Our Team</marquee>
+            </li>
         </div>
         <div id="products" class="dropdownMenu">
             <li class="ddItem">Refridgerators</li>
@@ -29,6 +45,11 @@
             <li class="ddItem">Home Appliances</li>
         </div>
     </div>
+
+
+    <section>
+        <h2 id="leadLine">A cool dropdown menu with a <u>marquee background</u> effect.</h2>
+    </section>
     
     <script src="main.js"></script>
 </body>
